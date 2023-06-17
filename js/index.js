@@ -8,8 +8,7 @@ const pintarKoders = async () => {
     method: "GET"
   });
   const data = await response.json();
-  console.log("DATA", data)
-  if(!data.success) alert("Hubo un error al pintar los data");
+  if(!data.success) alert("Hubo un error al pintar los koders");
   data.data.forEach((koder) => {
     const divParent = document.createElement("div");
     const name = document.createElement("p").textContent = `Name: ${koder.name}`;
